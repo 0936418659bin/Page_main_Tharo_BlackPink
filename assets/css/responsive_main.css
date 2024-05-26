@@ -1,0 +1,139 @@
+
+/* PC */
+@media (min-width: 64em){
+
+}
+
+/* Tabled & Mobile */
+@media (max-width: 63.9375em) {
+
+.btn {
+    padding: 23px;
+}
+
+.contact-content1 {
+    line-height: 2;
+}
+
+.mobile-btn {
+    width:40%;
+}
+
+.text-center a {
+    padding: 5px;
+}
+
+#buy-tickets {
+    padding:28px;
+}
+
+#footer .copyright.text-center {
+    font-size: 18px;
+}
+
+
+}
+
+/* Tabled */
+@media (min-width: 46.25em )  and (max-width: 63.9375em){
+
+    /* .table-input-flex {
+        display: flex;
+    } */
+
+}
+
+/*  Mobile */
+@media (max-width: 46.1875em){
+
+#header {
+    overflow: hidden;
+}
+
+#header .search-icon {
+    display: none;
+}
+
+#header .mobile-menu-btn {
+    display: block;
+}
+#nav {
+    display: block;
+}
+
+#nav > li{
+    display: block;
+}
+
+#nav li a {
+    padding: 1px 24px;
+} 
+
+#nav > li:first-child {
+    display: inline-block;
+}
+
+#nav .subnav {
+    position: initial;
+    background-color: #424242;
+}
+
+#nav .subnav a {
+    color: #fff;
+    padding: 5px 34px;
+}
+
+.slider .text-content {
+    bottom: 10px;
+}
+
+.slider .text-description {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.slider .text-heading {
+    font-size: 18px;
+}
+
+#content .member-item {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#content .members-img {
+    width: 60%;
+}
+
+.s-row-full {
+    width: 100%
+}
+
+.s-col-full {
+    width: 100%;
+}
+
+.contact-content1 {
+    margin-bottom: 16px;
+}
+
+
+.contact-content2 .form-control {
+    margin-bottom: 28px;
+    padding: 16px ;
+}
+
+
+.mobile-input1 {
+    width: 100%;
+}
+
+.input2 {
+    margin-top: -8px;
+}
+
+.input-flex {
+    display: block;
+}
+
+}

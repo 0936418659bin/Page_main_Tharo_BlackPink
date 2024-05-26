@@ -1,0 +1,553 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*       Nguyên tắc mỗi phần
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông,...) 
+ */
+
+ /*         Nguyên Tắc
+   1. Làm từ ngoài vào trong
+   2. làm từ trên xuống dưới
+   3. Tổng quan đến chi tiết
+ */
+
+ /* Common */
+ .clear{
+    clear: both;
+ }
+
+.text-white{
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn{
+    color: #fff;
+    margin: 16px 0;
+    padding: 10px 16px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #000;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.pull-right {
+    float: right !important;
+} 
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px ;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-fourd {
+    width: 25%;
+}
+
+.mgt-8 {
+    margin-top: 8px !important;
+}
+
+.mgt-16 {
+    margin-top: 16px;
+}
+
+/* main */
+#hieuthao{
+
+}
+
+#header{
+  height: 46.5px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li >  a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{  
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover{ /* cách viết gộp, khi 2 selectors có chung thuộc tính giống */
+    color:#000;
+    background-color: pink;
+    opacity: 0.8;
+}
+
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+   
+}
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right:0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color:#000;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: pink;
+}
+
+#header .search-btn:hover {
+    color: #000 ;
+    background-color: pink;
+}
+#header .menu-icon,
+#header .search-icon{
+    color:#fff;
+    font-size: 20px;
+    line-height: 46.5px;
+  
+}
+
+.slider{
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    
+}
+
+.slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    text-shadow:-1px -2px 6px #000;
+}
+
+.slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+   
+}
+
+#content{
+    
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 112px ;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+    text-align: center;
+}
+
+#content .about-text{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-name{
+    margin-top: 47px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#content .members-img{
+    width: 154px;
+    border-radius: 4px;
+}
+
+#content .members-img:hover {
+    opacity: 0.8;
+}
+
+/* Tour-section */
+
+.tour-section{
+    background-color: #000;
+  
+}
+
+.tickets-list{
+    margin-top: 30px;
+    list-style: none;
+    background-color: #fff;
+}
+
+
+.tickets-list .quantity{
+    float: right;
+    background-color: pink;
+    color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22.5px;
+    margin-top: -3px;
+    
+}
+
+.tickets-list li{
+    
+    font-size: 15px;
+    color: #757575;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sold-out{
+    background-color: pink;
+    color: #000;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+/* Place */
+
+.places-list{
+    margin-top: 16px ;
+}
+
+
+.place-img{
+    width:100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+    
+}
+
+.place-body{
+    font-size: 15px;
+    padding: 0.15px 16px;
+    background-color: #fff;
+}
+
+.place-heading{
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.place-time{
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+.place-desc{
+    line-height: 1.4;
+}
+
+.btn:hover {
+    background-color: pink;
+}
+
+.modal{
+    top: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5 );
+}
+
+.modal .modal-container{
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 32px);
+    background-color: #fff;
+    animation: modal-keyframes ease 0.4s;
+}
+
+.modal .modal-header{
+    height: 130px;
+    display: flex;
+    font-size: 30px;
+    background: pink;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-heading-icon {
+    margin-right: 16px;
+}
+
+.modal.open{
+    display: flex;
+}
+
+
+.modal-close {
+    top: 0; 
+    right: 0;
+    opacity: 0.8;
+    padding: 13px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.model-close:hover{
+    opacity: 0.8;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.input-flex {
+    display: flex;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+#buy-tickets {
+    width: 100%;
+    padding: 17px;
+    font-size: 15px;
+    background-color: pink;
+    text-transform: uppercase;
+}
+
+#buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    background-color: pink;
+    color: #000;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color: blue;
+}
+
+@keyframes modal-keyframes{
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact form */
+.contact-content {
+    margin-top: 48px;
+    
+}
+
+.contact-content1 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-content2{
+    font-size: 15px;
+
+}
+
+.contact-content1 i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-content1 a {
+    color: rgb(114, 114, 243);
+    opacity: 0.8;
+}
+
+.contact-content1 a:hover {
+    opacity: 1;
+}
+
+.contact-content2 .form-control{
+    padding: 8px;
+    border: 1px solid #ccc;
+    width:100%;
+   
+}
+
+/* Map section */
+.map-section img{
+    width: 100%;
+}
+
+/* Footer section */
+#footer{
+    padding: 64px 16px;
+    
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    font-size: 15px;
+    margin: 22px 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.copyright a{
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.copyright a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
