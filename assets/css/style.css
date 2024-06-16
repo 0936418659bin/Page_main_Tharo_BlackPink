@@ -1,14 +1,19 @@
 /* Reset CSS */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+    --text-color: #fff3f3;
+}
+
 /*       Nguyên tắc mỗi phần
 1. Vị trí
 2. Kích thước (width, height)
@@ -16,18 +21,18 @@ html{
 4. Kiểu dáng (kiểu chữ, hình tròn, vuông,...) 
  */
 
- /*         Nguyên Tắc
+/*         Nguyên Tắc
    1. Làm từ ngoài vào trong
    2. làm từ trên xuống dưới
    3. Tổng quan đến chi tiết
  */
 
- /* Common */
- .clear{
+/* Common */
+.clear {
     clear: both;
- }
+}
 
-.text-white{
+.text-white {
     color: #fff !important;
 }
 
@@ -35,7 +40,7 @@ html{
     text-align: center;
 }
 
-.btn{
+.btn {
     color: #fff;
     margin: 16px 0;
     padding: 10px 16px;
@@ -43,6 +48,21 @@ html{
     text-decoration: none;
     background-color: #000;
     border: none;
+}
+
+.btn-1 {
+    color: #000;
+    margin: 16px 0;
+    padding: 10px 16px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: pink;
+    border: none;
+}
+
+.btn-1:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .btn:hover {
@@ -53,14 +73,14 @@ html{
 
 .pull-right {
     float: right !important;
-} 
-
-.row {
-    margin-left: -8px;
-    margin-right: -8px ;
 }
 
-.row::after {
+.row1 {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row1::after {
     content: "";
     display: block;
     clear: both;
@@ -97,60 +117,60 @@ html{
 }
 
 /* main */
-#hieuthao{
+#hieuthao {}
 
+#header {
+    height: 46.5px;
+    background: linear-gradient(90deg, black, pink);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
-#header{
-  height: 46.5px;
-  background-color: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-#nav{
+#nav {
     display: inline-block;
 }
 
-#nav > li{
+#nav>li {
     display: inline-block;
 }
 
-#nav li{
+#nav li {
     position: relative;
 }
 
-#nav > li >  a{
+#nav>li>a {
     color: #fff;
     text-transform: uppercase;
 }
 
-#nav li a{  
+#nav li a {
     text-decoration: none;
     line-height: 46.5px;
     padding: 0 24px;
     display: block;
 }
 
-#nav li:hover .subnav{
+#nav li:hover .subnav {
     display: block;
 }
 
-#nav, .subnav{
+#nav,
+.subnav {
     list-style-type: none;
 }
 
-#nav > li:hover > a,
-#nav .subnav li:hover{ /* cách viết gộp, khi 2 selectors có chung thuộc tính giống */
-    color:#000;
+#nav>li:hover>a,
+#nav .subnav li:hover {
+    /* cách viết gộp, khi 2 selectors có chung thuộc tính giống */
+    color: #000;
     background-color: pink;
     opacity: 0.8;
 }
 
-#nav .subnav{
+#nav .subnav {
     display: none;
     min-width: 160px;
     top: 100%;
@@ -159,20 +179,21 @@ html{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#nav .subnav a{
+#nav .subnav a {
     color: #000;
     padding: 0 12px;
     line-height: 38px;
-   
+
 }
-#nav .nav-arrow-down{
+
+#nav .nav-arrow-down {
     font-size: 14px;
 }
 
 #header .mobile-menu-btn {
     position: absolute;
     top: 0;
-    right:0;
+    right: 0;
     display: none;
 }
 
@@ -183,7 +204,7 @@ html{
 }
 
 #header .mobile-menu-btn:hover .menu-icon {
-    color:#000;
+    color: #000;
 }
 
 #header .mobile-menu-btn:hover {
@@ -191,90 +212,112 @@ html{
 }
 
 #header .search-btn:hover {
-    color: #000 ;
+    color: #000;
     background-color: pink;
 }
+
 #header .menu-icon,
-#header .search-icon{
-    color:#fff;
+#header .search-icon {
+    color: #fff;
     font-size: 20px;
     line-height: 46.5px;
-  
+
 }
 
-.slider{
+.slider {
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    
+
 }
 
-.slider .text-content{
+.slider .text-content {
     position: absolute;
     bottom: 47px;
     color: #fff;
     width: 100%;
     text-align: center;
-    text-shadow:-1px -2px 6px #000;
+    text-shadow: -1px -2px 6px #000;
 }
 
-.slider .text-heading{
+.slider .text-heading {
     font-weight: 500;
     font-size: 24px;
 }
 
-.slider .text-description{
+.slider .text-description {
     font-size: 15px;
     margin-top: 25px;
-   
+
 }
 
-#content{
-    
+#content {
+    background: linear-gradient(335deg, black, pink);
 }
 
-#content .content-section{
+#content .content-section {
     width: 800px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0 112px ;
+    padding: 64px 0 112px;
     padding-left: 16px;
     padding-right: 16px;
 }
 
 
-#content .section-heading{
+#content .section-heading {
     font-size: 30px;
+    color: #000;
     font-weight: 500;
     text-align: center;
     letter-spacing: 4px;
 }
 
-#content .section-sub-heading{
+.section-heading-1 {
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
     margin-top: 20px;
     margin-right: 10px;
     margin-bottom: 15px;
     font-size: 15px;
     font-style: italic;
     opacity: 0.5;
+    color: #000;
     text-align: center;
 }
 
-#content .about-text{
+.section-sub-heading-1 {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#content .about-text {
     font-size: 15px;
     text-align: justify;
     line-height: 1.4;
 }
 
-#content .members-name{
+#content .members-name {
     margin-top: 47px;
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 500;
 }
 
-#content .members-img{
+#content .members-img {
     width: 154px;
     border-radius: 4px;
 }
@@ -285,19 +328,19 @@ html{
 
 /* Tour-section */
 
-.tour-section{
+.tour-section {
     background-color: #000;
-  
+
 }
 
-.tickets-list{
+.tickets-list {
     margin-top: 30px;
     list-style: none;
     background-color: #fff;
 }
 
 
-.tickets-list .quantity{
+.tickets-list .quantity {
     float: right;
     background-color: pink;
     color: #000;
@@ -307,18 +350,18 @@ html{
     text-align: center;
     line-height: 22.5px;
     margin-top: -3px;
-    
+
 }
 
-.tickets-list li{
-    
+.tickets-list li {
+
     font-size: 15px;
     color: #757575;
     padding: 8px 16px;
     border-bottom: 1px solid #ddd;
 }
 
-.sold-out{
+.sold-out {
     background-color: pink;
     color: #000;
     padding: 3px 4px;
@@ -327,39 +370,39 @@ html{
 
 /* Place */
 
-.places-list{
-    margin-top: 16px ;
+.places-list {
+    margin-top: 16px;
 }
 
 
-.place-img{
-    width:100%;
+.place-img {
+    width: 100%;
     display: block;
 }
 
 .place-img:hover {
     opacity: 0.6;
-    
+
 }
 
-.place-body{
+.place-body {
     font-size: 15px;
     padding: 0.15px 16px;
     background-color: #fff;
 }
 
-.place-heading{
+.place-heading {
     margin: 15px 0;
     font-size: 15px;
     font-weight: 550;
 }
 
-.place-time{
+.place-time {
     color: #757575;
     margin-bottom: 15px;
 }
 
-.place-desc{
+.place-desc {
     line-height: 1.4;
 }
 
@@ -367,20 +410,20 @@ html{
     background-color: pink;
 }
 
-.modal{
+.modal {
     top: 0;
     left: 0;
-    right: 0; 
+    right: 0;
     bottom: 0;
     display: none;
     position: fixed;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.5 );
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.modal .modal-container{
-    width: 900px;
+.modal .modal-container {
+    width: 500px;
     min-height: 200px;
     position: relative;
     max-width: calc(100% - 32px);
@@ -388,7 +431,7 @@ html{
     animation: modal-keyframes ease 0.4s;
 }
 
-.modal .modal-header{
+.modal .modal-header {
     height: 130px;
     display: flex;
     font-size: 30px;
@@ -401,13 +444,13 @@ html{
     margin-right: 16px;
 }
 
-.modal.open{
+.modal.open {
     display: flex;
 }
 
 
 .modal-close {
-    top: 0; 
+    top: 0;
     right: 0;
     opacity: 0.8;
     padding: 13px;
@@ -415,7 +458,7 @@ html{
     position: absolute;
 }
 
-.model-close:hover{
+.model-close:hover {
     opacity: 0.8;
 }
 
@@ -460,16 +503,17 @@ html{
     text-align: right;
 }
 
-.modal-footer a{
+.modal-footer a {
     color: blue;
 }
 
-@keyframes modal-keyframes{
-    from{
+@keyframes modal-keyframes {
+    from {
         opacity: 0;
         transform: translateY(-140px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -478,7 +522,7 @@ html{
 /* Contact form */
 .contact-content {
     margin-top: 48px;
-    
+
 }
 
 .contact-content1 {
@@ -486,7 +530,13 @@ html{
     line-height: 1.4;
 }
 
-.contact-content2{
+.contact-content1 p {
+    color: var(--text-color);
+}
+
+
+
+.contact-content2 {
     font-size: 15px;
 
 }
@@ -497,7 +547,7 @@ html{
 }
 
 .contact-content1 a {
-    color: rgb(114, 114, 243);
+    color: rgb(255 210 231);
     opacity: 0.8;
 }
 
@@ -505,20 +555,21 @@ html{
     opacity: 1;
 }
 
-.contact-content2 .form-control{
+.contact-content2 .form-control {
     padding: 8px;
     border: 1px solid #ccc;
-    width:100%;
-   
+    width: 100%;
+
 }
 
 /* Map section */
-.map-section img{
+.map-section img {
     width: 100%;
+    margin-bottom: -5px;
 }
 
 /* Footer section */
-#footer{
+/* #footer{
     padding: 64px 16px;
     
 }
@@ -550,4 +601,104 @@ html{
 
 .copyright a:hover {
     color: rgba(0, 0, 0, 0.4);
+} */
+.footer {
+    padding-top: 28px;
+    background: linear-gradient(359deg, black, pink);
+    border-top: 4px solid var(--primary-color);
 }
+
+.footer-content {
+    text-align: center;
+}
+
+.footer__heading {
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 8px;
+}
+
+.footer-item {
+    display: flex;
+}
+
+.footer__item-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #000;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.footer__item-link:hover {
+    color: #ede0ef;
+}
+
+.footer-item__icon {
+    font-size: 1.7rem;
+    margin-top: -1px;
+    margin-right: 8px;
+}
+
+.footer-app {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__download {
+    display: flex;
+    margin-top: 18px;
+    justify-content: center;
+    padding-right: 21px;
+}
+
+.footer__download a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    margin-left: 8px;
+}
+
+.footer__download a:hover {
+    color: #fff3f3;
+}
+
+.footer__download-qr {
+    width: 80px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-apps {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-img {
+    height: 20px;
+}
+
+.footer__bottom {
+    /* background-color: ; */
+    padding: 8px 0;
+    margin-top: 35px;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #b9b2b2;
+}
+
